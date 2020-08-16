@@ -1,0 +1,54 @@
+body{
+    background-color: rgb(173, 173, 250);
+}
+.container{
+    background-color: rgb(151, 211, 252);
+    margin-left: auto;
+    margin-right: auto;
+}
+.searchbar{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+    border-color:red;
+    
+}
+.searchbox{
+    width: 6cm;
+    height: 1cm;
+    margin-left:100px;
+    margin-top: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+.searchbutton{
+    color:white;
+    border-radius: 10px;
+    background-color: blue;
+    height: 0.7cm;
+    width: 2cm;
+
+}
+
+.container{
+    width :500px;
+    height :400px;
+}
+.titles{
+    text-align: center;
+    font-size:1cm; 
+}
+.status{
+    text-align: center;
+    font-size: 0.6cm;
+}
+img{
+    margin-left: 200px;
+
+}
+.temperature{
+    text-align: center;
+    text-align:auto;
+    font-weight: 400;
+
+}
