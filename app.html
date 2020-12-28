@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather application</title>
+    <script src="https://kit.fontawesome.com/f3f4a41820.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+<!--grab the font from the google fonts-->
+</head>
+<body>
+    <div class="container">
+        <form id="searchbar">
+            <input class="searchbox" placeholder="Enter the city" type="text" autocomplete="off" id="city-input">
+            <button id="button" class="searchbutton" type="submit">
+                <i class="fas fa-meteor"></i>
+            </button>
+        </form>
+        <div class="other-contents">
+            <h1 id="title" class="title"></h1>
+            <p id="status" class="status"></p>
+            <img src="" id="weathericon" class="icon" alt="">
+            <h2 id="temp" class="temperature"></h2>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
