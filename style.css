@@ -1,98 +1,144 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    background-image: url(picture2.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: aclonica;
-}
-.container{
-    width:350px;
-    height:480px;
-    border-radius: 20px;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    animation-name: introduction;
-    animation-duration: 2s;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0,0,0,0.5);
-}
-.searchbox{
-    margin-left: 20px;
-    margin-top: 20px;
-    position:relative;
-    background-color:rgb(0,0,0,0);
-    border-color: rgba(0,0,0,0);
-    text-align: center;
-    color: aliceblue;
-    border-radius:5px;
-    padding:10px;
-    font-size: 25px;
-    width: 13rem;
-    height: 3rem;
-    animation-name: search;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
-}
-.searchbutton{
-    padding: 0px;
-    font-size: 2.5rem;
-    color:rgb(201, 195, 195);
-    float:right;
-    background-color:rgba(0,0,0,0);
-    margin-top: 20px;
-    margin-right: 10px;
-    border:0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 0px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.title{
-    margin-top: 125px;
-    color: aliceblue;
-    font-size: 1.7rem;
-    text-align:center;
-    box-sizing: border-box;
-    
-}
-.status{
-    color: aliceblue;
-    font-size:1rem ;
-    margin-top: 20px;
-    text-align:center;
-}
-.temperature{
-    color: aliceblue;
-    text-align:center;
-    font-size: 2rem;
-}
-.icon{
-    margin-left: 7rem;
-}
-@keyframes introduction {
-    0%{
-        width: 200px;
-        height: 270px;
-        opacity: 0;
-        
-    }
-    100%{
-        width: 350px;
-        height: 480px;
-        opacity: 1;
-        }
-}
-@keyframes search{
-    0%{opacity: 0;
-        color:rgba(0, 0, 0, 0);
-    }
-    100%{opacity: 1;
-    }
+body {
+  background-color: #333;
+  color: #fff;
 }
 
+.container {
+  background: #171717;
+  color: #fff;
+  padding: 2rem;
+  width: 40%;
+  margin: 4rem auto;
+  border-radius: 10px;
+}
+
+.weather_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  border: none;
+  background: #1e1e1e;
+  outline: none;
+  color: #fff;
+  padding: 0.5rem 2.5rem;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+.weather_search {
+  position: relative;
+}
+
+.weather_search i {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 15px;
+  color: #fff;
+}
+
+.units {
+  font-size: 1.5rem;
+}
+
+.units span {
+  cursor: pointer;
+}
+
+.units span:first-child {
+  margin-right: 0.5rem;
+}
+
+.body {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.dateTime {
+  margin-bottom: 2rem;
+  font-size: 14px;
+}
+
+.forecast {
+  background: #1e1e1e;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+}
+
+.icon img {
+  width: 100px;
+}
+
+.temperature {
+  font-size: 1.75rem;
+}
+
+.minmax {
+  display: flex;
+  justify-content: center;
+}
+
+.minmax p {
+  font-size: 14px;
+  margin: 0.5rem;
+}
+
+.weather_info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  margin-top: 3rem;
+}
+
+.weather_card {
+  display: flex;
+  align-items: center;
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.weather_card i {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.weather_card p {
+  font-size: 14px;
+}
+
+@media (max-width: 936px) {
+  .container {
+    width: 90%;
+  }
+
+  .weather_header {
+    flex-direction: column;
+  }
+
+  .units {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .weather_info {
+    grid-template-columns: none;
+  }
+}

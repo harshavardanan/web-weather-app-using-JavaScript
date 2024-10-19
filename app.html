@@ -1,29 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather application</title>
-    <script src="https://kit.fontawesome.com/f3f4a41820.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
-<!--grab the font from the google fonts-->
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/a692e1c39f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div class="container">
-        <form id="searchbar">
-            <input class="searchbox" placeholder="Enter the city" type="text" autocomplete="off" id="city-input">
-            <button id="button" class="searchbutton" type="submit">
-                <i class="fas fa-meteor"></i>
-            </button>
+      <div class="weather_header">
+        <form class="weather_search" onsubmit="fetchApi(event)">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            placeholder="Search for a city..."
+            class="searchBar"
+            id="searchBar"
+          />
         </form>
-        <div class="other-contents">
-            <h1 id="title" class="title"></h1>
-            <p id="status" class="status"></p>
-            <img src="" id="weathericon" class="icon" alt="">
-            <h2 id="temp" class="temperature"></h2>
+      </div>
+
+      <div class="body">
+        <h1 class="city"></h1>
+        <div class="dateTime"></div>
+        <div class="forecast" id="status"></div>
+        <!-- Added id -->
+        <div class="icon">
+          <img src="icon.png" alt="Weather Icon" id="weathericon" />
+          <!-- Added id -->
         </div>
+        <p class="temperature" id="temperature"></p>
+        <!-- Added id -->
+        <div class="minmax">
+          <p id="min"></p>
+          <p id="max"></p>
+        </div>
+      </div>
+
+      <div class="weather_info">
+        <div class="weather_card">
+          <i class="fa-solid fa-temperature-full"></i>
+          <div>
+            <p>Real Feel</p>
+            <p id="realfeel"></p>
+          </div>
+        </div>
+        <div class="weather_card">
+          <i class="fa-solid fa-droplet"></i>
+          <div>
+            <p>Humidity</p>
+            <p id="humidity"></p>
+          </div>
+        </div>
+        <div class="weather_card">
+          <i class="fa-solid fa-wind"></i>
+          <div>
+            <p>Wind</p>
+            <p id="wind"></p>
+          </div>
+        </div>
+        <div class="weather_card">
+          <i class="fa-solid fa-gauge-high"></i>
+          <div>
+            <p>Pressure</p>
+            <p id="pressure"></p>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
